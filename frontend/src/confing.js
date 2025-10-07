@@ -1,0 +1,1 @@
+export const BACKEND_URL="https://ai-quizapp.onrender.com"
