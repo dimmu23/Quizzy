@@ -79,4 +79,4 @@ npm run dev
 ---
 
 Contact
-Email: deveshparyani17@gmail.com
+Email: dimmunokha@gmail.com
