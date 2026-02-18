@@ -1,6 +1,7 @@
 import mongoose, { Mongoose } from "mongoose";
 
-mongoose.connect("mongodb+srv://deveshparyani17:4aqolemn@admin.sx4z291.mongodb.net/");
+//mongoose.connect("mongodb+srv://deveshparyani17:4aqolemn@admin.sx4z291.mongodb.net/");
+mongoose.connect("mongodb+srv://22uec138_db_user:IimRHUH0BFfWqm36@cluster0.ke2ejew.mongodb.net/?");
 
 const userSchema = mongoose.Schema({
     username:{
