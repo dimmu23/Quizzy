@@ -204,8 +204,8 @@ function getPrompt(topic,numques,difficulty){
 }
 
 router.post("/genratequiz", middleware,async (req, res) => { 
-    const genAI = new GoogleGenerativeAI("AIzaSyAU5dtpb83lzs8qeg5PKlarEzJFlqamMY0");
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const genAI = new GoogleGenerativeAI("AIzaSyDat_zj5E_jgN9WllmSCtOO8a8ai5Z1HA4");
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     try {
         const { topic, numques, difficulty } = req.body;
 
