@@ -204,9 +204,13 @@ function getPrompt(topic,numques,difficulty){
 }
 
 router.post("/genratequiz", middleware,async (req, res) => { 
-    const genAI = new GoogleGenerativeAI("AIzaSyD0WoO35IFdHRNY0f69y270zabbQA949qU");
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
     try {
+        if (!process.env.GEMINI_API_KEY) {
+            return res.status(500).json({ error: "GEMINI_API_KEY is not configured on the server." });
+        }
+
+        const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
         const { topic, numques, difficulty } = req.body;
 
         if (!topic || !numques || !difficulty) {
